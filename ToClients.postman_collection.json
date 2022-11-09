@@ -1,0 +1,1374 @@
+{
+	"info": {
+		"_postman_id": "1ed22de9-5150-4e8f-9b66-3dcf4c84f148",
+		"name": "ToClients",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"apkversion\":\"1.0.9\", \"uid\":\"POORNA\", \"pwd\":\"3906e2afbfffe683f5d80264e7e5c3511c18215beade570067f5d44d0e3bf7a4\",\"factor2\":\"AAAAA1234A\",\"imei\":\"ag3tbbbb33\", \"source\":\"WEB\", \"vc\":\"NOREN_WEB\", \"appkey\":\"99efd4323f34870b6c295615edef2ddd0c3d5282e574a31514e60c507534f11d\"}\n"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/QuickAuth",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"QuickAuth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ready",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/ready",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"ready"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OrderBook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/OrderBook",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"OrderBook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Detail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/UserDetails",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"UserDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Scrip To Watchlist",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\",\"wlname\":\"122334\",\"scrips\":\"NSE|22#BSE|506734\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/AddMultiScripsToMW",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"AddMultiScripsToMW"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Watchlist Names",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/MWList",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"MWList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Watchlist Scrips",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\",\"wlname\":\"2\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/MarketWatch",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"MarketWatch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Scrip",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\",\"stext\":\"NIFTY JUN FUT\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/SearchScrip",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"SearchScrip"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Scrip In Exchange",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\",\"stext\":\"NIFTY JUN FUT\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/SearchScrip",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"SearchScrip"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetLinkedScrips",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\",  \"exch\":\"NSE\", \"token\":\"22\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/GetLinkedScrips",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"GetLinkedScrips"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PositionBook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\",\"actid\":\"{{ACCT_ID}}\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/PositionBook",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"PositionBook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forgot Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\", \"pan\":\"{{PAN}}\", \"dob\":\"02041997\"}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/ForgotPassword",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"ForgotPassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\", \"oldpwd\":\"ff96673205dc722320598ebf8f88325b2ac56922d5a2164b5765868274bc0d73\", \"pwd\":\"\"}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/Changepwd",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"Changepwd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Scrip to Watch List",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "Data={\"uid\":\"{{USER_ID}}\",\"wlname\":\"122334\",\"scrips\":\"NSE|22#BSE|506734\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/DeleteMultiMWScrips",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"DeleteMultiMWScrips"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Holdings",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\",\"actid\":\"{{ACCT_ID}}\",\"prd\":\"C\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/Holdings",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"Holdings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Conversion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"exch\":\"NSE\",\"tsym\":\"ACC-EQ\",\"qty\":\"1\",\"uid\":\"{{USER_ID}}\",\"actid\":\"{{ACCT_ID}}\",\"prd\":\"M\",\"prevprd\":\"I\",\"trantype\":\"S\",\"postype\":\"DAY\",\"ordersource\":\"MOB\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/ProductConversion",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"ProductConversion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PositionBook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\",\"actid\":\"{{ACCT_ID}}\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/PositionBook",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"PositionBook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Limits",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\",\"actid\":\"{{ACCT_ID}}\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/Limits",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"Limits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Top List Names",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\",\"exch\":\"BSE\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/TopListName",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"TopListName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Top List",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\",\"exch\":\"NSE\",\"bskt\":\"NSEEQ\",\"tb\":\"T\",\"crt\":\"LTP\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/TopList",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"TopList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Time Price Data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\",\"exch\":\"NSE\",\"token\":\"22\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/TPSeries",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"TPSeries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ExchMsg",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/ExchMsg",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"ExchMsg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SpanCalc",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"actid\":\"DUMMY\", \"pos\":[{\"prd\":\"M\", \"exch\":\"NFO\", \"symname\":\"NIFTY\",\"instname\":\"FUTIDX\",\"exd\":\"2022-02-24\", \"netqty\":\"50\"},{\"prd\":\"M\", \"exch\":\"NFO\", \"symname\":\"NIFTY\",\"instname\":\"FUTIDX\",\"exd\":\"2022-03-31\", \"netqty\":\"-50\"}]}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/SpanCalc",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"SpanCalc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBrokerMsg",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/GetBrokerMsg",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"GetBrokerMsg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get SecurityInfo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\", \"exch\":\"NFO\", \"token\":\"35003\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/GetSecurityInfo",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"GetSecurityInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\"}&jKey=a"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/Logout",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"Logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set Alert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\",\"tsym\":\"ACC-EQ\",\"exch\":\"NSE\",\"ai_t\":\"LTP_A\", \"validity\":\"DAY\", \"d\":\"1900\", \"remarks\":\"test\" }&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/SetAlert",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"SetAlert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modify Alert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\",\"tsym\":\"ACC-EQ\",\"exch\":\"NSE\",\"ai_t\":\"LTP_A\", \"al_id\":\"21060400000002\", \"d\":\"1900.5\", \"validity\":\"DAY\", \"remarks\":\"modified\" }&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/ModifyAlert",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"ModifyAlert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetQuotes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "Data={\"uid\":\"{{USER_ID}}\", \"exch\":\"NSE\", \"token\":\"22\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/GetQuotes",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"GetQuotes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SaveFMCToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\", \"fcmtkn\":\"22\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/SaveFMCToken",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"SaveFMCToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ExitSNOOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\", \"norenordno\":\"21060400000088\", \"prd\":\"H\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/ExitSNOOrder",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"ExitSNOOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBasketMargin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\",\"actid\":\"{{ACCT_ID}}\",\"exch\":\"NSE\",\"tsym\":\"RELIANCE-EQ\",\"qty\":\"1\",\"prc\":\"2000\",\"prd\":\"C\",\"trantype\":\"B\",\"prctyp\":\"LMT\",\"basketlists\":[{\"exch\":\"NSE\",\"tsym\":\"RELIANCE-EQ\",\"qty\":\"500\",\"prc\":\"2000\",\"prd\":\"C\",\"trantype\":\"B\",\"prctyp\":\"LMT\"},{\"exch\":\"NSE\",\"tsym\":\"ACC-EQ\",\"qty\":\"5\",\"prc\":\"2000\",\"prd\":\"M\",\"trantype\":\"B\",\"prctyp\":\"LMT\"}]}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/GetBasketMargin",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"GetBasketMargin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOrderMargin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID]}\",\"actid\":\"{{ACCT_ID}}\",\"exch\":\"NSE\",\"tsym\":\"RELIANCE-EQ\",\"qty\":\"1\",\"prc\":\"2000\",\"prd\":\"C\",\"trantype\":\"S\",\"prctyp\":\"LMT\"}&jKey=\"{{jkey}}\""
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/GetOrderMargin",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"GetOrderMargin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ClientDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\", \"actid\":\"{{ACCT_ID}\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/ClientDetails",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"ClientDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TradeBook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\", \"actid\":\"{{ACCT_ID}}\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/TradeBook",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"TradeBook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MultiLegOrderBook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/MultiLegOrderBook",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"MultiLegOrderBook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetIndexList",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\",\"exch\":\"NSE\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/GetIndexList",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"GetIndexList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ValidateHsToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "LoginId={{USER_ID}}&token=DweYtyP48UvUQcgUzLDZFF19"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/ValidateHsToken",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"ValidateHsToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetHsToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/GetHsToken",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"GetHsToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SetHsInit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/SetHsInit",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"SetHsInit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOptionChain",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\", \"exch\":\"NSE\", \"tsym\":\"RELIANCE-EQ\", \"strprc\":\"2098.95\", \"cnt\":\"5\" }&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/GetOptionChain",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"GetOptionChain"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetDataPoints",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\",  \"exch\":\"NSE\", \"tsym\":\"RELIANCE-EQ\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/GetTechnicals",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"GetTechnicals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PreDefinedMW",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\",\"wlname\":\"NIFTY50\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/PreDefinedMW",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"PreDefinedMW"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PreDefinedMWList",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/PreDefinedMWList",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"PreDefinedMWList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUnderlyingExchToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"exch\":\"NFO\", \"token\":\"35003\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/GetUnderlyingExchToken",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"GetUnderlyingExchToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTranDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"trans_ref_num\":\"20221730000001\"}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/GetTranDetails",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"GetTranDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PlaceSipOrder",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\", \"actid\":\"{{ACCT_ID}}\", \"reg_date\":\"29072022\", \"start_date\":\"05082022\", \"frequency\":\"0\", \"end_period\":\"10\", \"sip_name\":\"SIP123\", \"Scrips\":[{\"exch\":\"NSE\",\"tsym\":\"ACC-EQ\", \"token\":\"22\", \"prd\":\"C\", \"prc\":\"6\"}]}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/PlaceSipOrder",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"PlaceSipOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Scrip",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\",\"stext\":\"NIFTY JUN FUT\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/SearchScrip",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"SearchScrip"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOptionChain",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\", \"exch\":\"NSE\", \"tsym\":\"RELIANCE-EQ\", \"strprc\":\"2098.95\", \"cnt\":\"5\" }&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/GetOptionChain",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"GetOptionChain"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get SecurityInfo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\", \"exch\":\"NFO\", \"token\":\"35003\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/GetSecurityInfo",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"GetSecurityInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetQuotes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"${USER_ID}\", \"exch\":\"NSE\", \"token\":\"22\"}&jKey=${jkey}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/GetQuotes",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"GetQuotes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTimePriceSeries",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\",\"exch\":\"NSE\",\"token\":\"22\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/TPSeries",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"TPSeries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Place Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\",\"actid\":\"{{ACCT_ID}}\",\"exch\":\"NSE\",\"tsym\":\"AARVI-EQ\",\"qty\":\"1\",\"prc\":\"21474836.47\",\"prd\":\"M\",\"trantype\":\"S\",\"prctyp\":\"LMT\",\"ret\":\"DAY\",\"remarks\":\"\",\"ordersource\":\"WEB\", \"blprc\":\"100\", \"bpprc\":\"100\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/PlaceOrder",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"PlaceOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modify Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\",\"exch\":\"NFO\",\"tsym\":\"BANKNIFTY28JUL2225AUG22F\",\"norenordno\":\"22061300000246\",\"qty\":\"50\",\"prc\":\"610\",\"prctyp\":\"DS\",\"ret\":\"DAY\",\"ordersource\":\"WEB\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/ModifyOrder",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"ModifyOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\",\"norenordno\":\"22060100000039\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/CancelOrder",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"CancelOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Conversion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"exch\":\"NSE\",\"tsym\":\"ACC-EQ\",\"qty\":\"1\",\"uid\":\"{{USER_ID}}\",\"actid\":\"{{ACCT_ID}}\",\"prd\":\"M\",\"prevprd\":\"I\",\"trantype\":\"S\",\"postype\":\"DAY\",\"ordersource\":\"MOB\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/ProductConversion",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"ProductConversion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TradeBook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "jData={\"uid\":\"{{USER_ID}}\", \"actid\":\"{{ACCT_ID}}\"}&jKey={{jkey}}"
+				},
+				"url": {
+					"raw": "http://{{Domain_Name}}/NorenWClient/TradeBook",
+					"protocol": "http",
+					"host": [
+						"{{Domain_Name}}"
+					],
+					"path": [
+						"NorenWClient",
+						"TradeBook"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "USER_ID",
+			"value": "POORNA",
+			"type": "default"
+		},
+		{
+			"key": "ACCT_ID",
+			"value": "POORNA",
+			"type": "default"
+		},
+		{
+			"key": "PASSWORD",
+			"value": "3906e2afbfffe683f5d80264e7e5c3511c18215beade570067f5d44d0e3bf7a4",
+			"type": "default"
+		},
+		{
+			"key": "PAN",
+			"value": "AAAAA1234A",
+			"type": "default"
+		},
+		{
+			"key": "jkey",
+			"value": "8e0b7f408f9efc826c610222fbcafb67ff62a154a2d65f1437db8a290efb431d",
+			"type": "default"
+		},
+		{
+			"key": "Domain_Name",
+			"value": "http://matsya.kambala.co.in:9957",
+			"type": "default"
+		}
+	]
+}
