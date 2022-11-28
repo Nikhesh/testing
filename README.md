@@ -1175,6 +1175,7 @@ Market Info
 
 #### <a name="md-span_calculator"></a> span_calculator(product_type,exchange,Instrumentname,Symbolname,expiredate,Nettradedquantity)
 connect to the broker, only once this function has returned successfully can any other operations be performed
+
 Example: 
 
 ```
@@ -1221,6 +1222,7 @@ Sample Success Response :
 
 #### <a name="md-get_option_greek"></a>get_option_greek(self,expiredate,StrikePrice,SpotPrice,InitRate,Volatility,OptionType)
 connect to the broker, only once this function has returned successfully can any other operations be performed
+
 Example: 
 
 ```
@@ -1232,7 +1234,7 @@ Request Details :
 | --- | --- | ---|
 |exd*||Expiry Date|
 |strprc*||Strike Price |
-|sptprc*|Spot Price|
+|sptprc*||Spot Price|
 |int_rate*||Init Rate|
 |volatility*||Volatility|
 |optt||Option Type|
