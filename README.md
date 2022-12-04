@@ -1173,7 +1173,7 @@ Sample Failure Response :
 Market Info
 
 
-#### <a name="md-span_calculator"></a> span_calculator(pan_calculator(actid,positionlist)
+#### <a name="md-span_calculator"></a> span_calculator(actid,positionlist)
 This calculates the margin requirement for a list of input positions.
 
 Example: 
