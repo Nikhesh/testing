@@ -1860,7 +1860,7 @@ Request Details :
 | --- | --- | ---|
 |sym*||Symbol name|
 |from*||From date|
-|to*|To date |
+|to*||To date |
 
 Response Details :
 
