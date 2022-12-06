@@ -1847,7 +1847,7 @@ Sample Failure Response :
      "emsg":"Session Expired : Invalid Session Key"
 }
 
-#### <a name="#md-get_daily_price_series "></a>get_daily_price_series(Symbol name, From date, To date):
+#### <a name="#md-get_daily_price_series"></a>get_daily_price_series(Symbol name, From date, To date):
 gets the chart date for the symbol
 
 Example:
