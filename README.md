@@ -454,7 +454,6 @@ Request Details :
 |Json Fields|Possible value|Description|
 | --- | --- | ---|
 |uid*||Logged in User Id|
-|actid*||Account Id of logged in user|
 
 Response Details :
 
@@ -576,7 +575,6 @@ Request Details :
 |Json Fields|Possible value|Description|
 | --- | --- | ---|
 |uid*||Logged in User Id|
-|actid*||Account id of the logged in user.|
 
 Response Details :
 
@@ -670,8 +668,7 @@ Sample Success Response :
 "urmtom":"0.00",
 "rpnl":"0.00",
 "cforgavgprc":"0.00"
-
-    }
+     }
 ]
 
 Sample Failure Response :
