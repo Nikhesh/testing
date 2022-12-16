@@ -31,7 +31,7 @@ Orders and Trades
 - [get_tradebook](#md-get_tradebook)
 
 Holdings and Limits
-- [Interop Positions Book](#md-get_positions)
+- [get_positions](#md-get_positions)
 
 Example
 - [getting started](#md-example-basic)
@@ -555,6 +555,132 @@ Sample Success Output :
    }
 ]
 
+#### <a name="md-get_positions"></a> get_positions()
+
+retrieves the overnight and day positions as a list
+
+Example: 
+```
+ret = api.get_positions()
+mtm = 0
+pnl = 0
+for i in ret:
+    mtm += float(i['urmtom'])
+    pnl += float(i['rpnl'])
+    day_m2m = mtm + pnl
+print(f'{day_m2m} is your Daily MTM')
+```
+
+Request Details :
+
+|Json Fields|Possible value|Description|
+| --- | --- | ---|
+|uid*||Logged in User Id|
+|actid*||Account id of the logged in user.|
+
+Response Details :
+
+Response data will be in json format with Array of Objects with below fields in case of success.
+
+|Json Fields|Possible value|Description|
+| --- | --- | ---|
+|stat|Ok or Not_Ok|Position book success or failure indication.|
+|exch||Exchange segment|
+|tsym||Trading symbol / contract.|
+|token||Contract token|
+|uid||User Id|
+|actid||Account Id|
+|prd||Product name to be shown.|
+|netqty||Net Position quantity|
+|netavgprc||Net position average price|
+|daybuyqty||Day Buy Quantity|
+|daysellqty||Day Sell Quantity|
+|daybuyavgprc||Day Buy average price|
+|daysellavgprc||Day buy average price|
+|daybuyamt||Day Buy Amount|
+|daysellamt||Day Sell Amount|
+|cfbuyqty||Carry Forward Buy Quantity|
+|cforgavgprc||Original Avg Price|
+|cfsellqty||Carry Forward Sell Quantity|
+|cfbuyavgprc||Carry Forward Buy average price|
+|cfsellavgprc||Carry Forward Buy average price|
+|cfbuyamt||Carry Forward Buy Amount|
+|cfsellamt||Carry Forward Sell Amount|
+|lp||LTP|
+|rpnl||RealizedPNL|
+|urmtom||UnrealizedMTOM.|(Can be recalculated in LTP update :| = netqty * (lp from web socket - netavgprc) * prcftr ||
+|bep||Break even price|
+|openbuyqty|||
+|opensellqty|||
+|openbuyamt|||
+|opensellamt|||
+|openbuyavgprc|||
+|opensellavgprc|||
+|mult|||
+|pp|||
+|prcftr||gn*pn/(gd*pd). |
+|ti||Tick size|
+|ls||Lot size|
+|request_time||This will be present only in a failure response.|
+
+Response data will be in json format with below fields in case of failure:
+
+|Json Fields|Possible value|Description|
+| --- | --- | ---|
+|stat|Not_Ok|Position book request failure indication.|
+|request_time||Response received time.|
+|emsg||Error message|
+
+
+Sample Success Response :
+[
+     {
+"stat":"Ok",
+"uid":"POORNA",
+"actid":"POORNA",
+"exch":"NSE",
+"tsym":"ACC-EQ",
+"prarr":"C",
+"pp":"2",
+"ls":"1",
+"ti":"5.00",
+"mult":"1",
+"prcftr":"1.000000",
+"daybuyqty":"2",
+"daysellqty":"2",
+"daybuyamt":"2610.00",
+"daybuyavgprc":"1305.00",
+"daysellamt":"2610.00",
+"daysellavgprc":"1305.00",
+"cfbuyqty":"0",
+"cfsellqty":"0",
+"cfbuyamt":"0.00",
+"cfbuyavgprc":"0.00",
+"cfsellamt":"0.00",
+"cfsellavgprc":"0.00",
+"openbuyqty":"0",
+"opensellqty":"23",
+"openbuyamt":"0.00",
+"openbuyavgprc":"0.00",
+"opensellamt":"30015.00",
+"opensellavgprc":"1305.00",
+"netqty":"0",
+"netavgprc":"0.00",
+"lp":"0.00",
+"urmtom":"0.00",
+"rpnl":"0.00",
+"cforgavgprc":"0.00"
+
+    }
+]
+
+Sample Failure Response :
+{
+    "stat":"Not_Ok",
+    "request_time":"14:14:11 26-05-2020",
+    "emsg":"Error Occurred : 5 \"no data\""
+}
+
 
 #### <a name="md-get_security_info"></a> get_security_info(exchange, token):
 gets the complete details and its properties 
@@ -793,6 +919,115 @@ Sample Failure Response :
     "emsg":"Error Occurred : 5 \"no data\""
 }
 
+
+#### <a name="md-get_clients"></a> get_clients():
+
+Example: 
+```
+ret = api.get_clients()
+```
+
+Request Details :
+
+|Json Fields|Possible value|Description|
+| --- | --- | ---|
+|uid*||Logged in User Id|
+
+Response Details :
+
+Response data will be in json format with below fields.
+
+|Json Fields|Possible value|Description|
+| --- | --- | ---|
+|stat|Ok or Not_Ok|Watch list update success or failure indication.|
+|request_time||Requested Time|
+|entities||Json array of strings with account id and exch ist |
+|emsg||This will be present only in case of errors. |
+
+entities Obj format
+|Json Fields|Possible value|Description|
+| --- | --- | ---|
+|exch||Exchange name|
+|part_id||Part Id|
+
+Sample Success Response :
+{
+"stat": "Ok",
+"request_time": "09:49:37 19-07-2022",
+"entities": [
+{
+"acct_id": "GURURAJ",
+"exch_list": [
+{
+"exch": "CDS",
+"part_id": ""
+},
+{
+"exch": "NSE","part_id": ""
+},
+{
+"exch": "NFO",
+"part_id": ""
+},
+{
+"exch": "MCX",
+"part_id": ""
+},
+{
+"exch": "BSE",
+"part_id": ""
+},
+{
+"exch": "NCX",
+"part_id": ""
+},
+{
+"exch": "BSTAR",
+"part_id": ""
+},
+{
+"exch": "BCD",
+"part_id": ""
+}
+]
+},
+{
+"acct_id": "CLINV1",
+"exch_list": [
+{
+"exch": "NSE",
+"part_id": ""
+},
+{
+"exch": "BSE",
+"part_id": ""
+}
+]
+},
+{"acct_id": "1T012",
+"exch_list": []
+},
+{
+"acct_id": "CH005",
+"exch_list": [
+{
+"exch": "NSE",
+"part_id": ""
+},
+{
+"exch": "BSE",
+"part_id": ""
+}
+]
+}
+]
+}
+
+Sample Failure Response :
+{
+"stat": "Not_Ok",
+"emsg": "Session Expired : Invalid Session Key"
+}
 
 ****
 ## <a name="md-example-basic"></a> Example - Getting Started
