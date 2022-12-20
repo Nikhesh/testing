@@ -589,37 +589,41 @@ Response data will be in json format with Array of Objects with below fields in 
 |uid||User Id|
 |actid||Account Id|
 |prd||Product name to be shown.|
-|netqty||Net Position quantity|
-|netavgprc||Net position average price|
 |daybuyqty||Day Buy Quantity|
 |daysellqty||Day Sell Quantity|
-|daybuyavgprc||Day Buy average price|
-|daysellavgprc||Day buy average price|
 |daybuyamt||Day Buy Amount|
 |daysellamt||Day Sell Amount|
 |cfbuyqty||Carry Forward Buy Quantity|
-|cforgavgprc||Original Avg Price|
 |cfsellqty||Carry Forward Sell Quantity|
-|cfbuyavgprc||Carry Forward Buy average price|
-|cfsellavgprc||Carry Forward Buy average price|
 |cfbuyamt||Carry Forward Buy Amount|
 |cfsellamt||Carry Forward Sell Amount|
-|lp||LTP|
-|rpnl||RealizedPNL|
-|urmtom||UnrealizedMTOM.|(Can be recalculated in LTP update :| = netqty * (lp from web socket - netavgprc) * prcftr ||
-|bep||Break even price|
-|openbuyqty|||
-|opensellqty|||
-|openbuyamt|||
-|opensellamt|||
-|openbuyavgprc|||
-|opensellavgprc|||
-|mult|||
-|pp|||
-|prcftr||gn*pn/(gd*pd). |
-|ti||Tick size|
-|ls||Lot size|
-|request_time||This will be present only in a failure response.|
+|openbuyqty||Open Buy Quantity|
+|opensellqty||Open Sell Quantity|
+|openbuyamt||Open Buy Amount|
+|opensellamt||Open Sell Amount|
+|instname||Instrument Name|
+|upload_prc||Upload Price|
+|Child_orders||Array Object,|
+
+child_orders Obj format
+|Json Fields|Possible value|Description|
+| --- | --- | ---|
+|exch||Exchange segment|
+|token||Contract token|
+|daybuyqty||Day Buy Quantity|
+|daysellqty||Day Sell Quantity|
+|daybuyamt||Day Buy Amount|
+|daysellamt||Day Sell Amount|
+|cfbuyqty||CF Buy Quantity|
+|cfsellqty||CF Sell Quantity|
+|cfbuyamt||CF Buy Amount|
+|cfsellamt||CF Sell Amount
+|openbuyqty||Open Buy Quantity|
+|opensellqty||Open Sell Quantity|
+|openbuyamt||Open Buy Amount|
+|opensellamt||Open Sell Amount|
+|upload_prc||Upload Price|
+
 
 Response data will be in json format with below fields in case of failure:
 
@@ -632,45 +636,62 @@ Response data will be in json format with below fields in case of failure:
 
 Sample Success Response :
 [
-     {
+{
 "stat":"Ok",
-"uid":"POORNA",
-"actid":"POORNA",
-"exch":"NSE",
-"tsym":"ACC-EQ",
-"prarr":"C",
-"pp":"2",
-"ls":"1",
-"ti":"5.00",
-"mult":"1",
-"prcftr":"1.000000",
-"daybuyqty":"2",
-"daysellqty":"2",
-"daybuyamt":"2610.00",
-"daybuyavgprc":"1305.00",
-"daysellamt":"2610.00",
-"daysellavgprc":"1305.00",
-"cfbuyqty":"0",
-"cfsellqty":"0",
-"cfbuyamt":"0.00",
-"cfbuyavgprc":"0.00",
-"cfsellamt":"0.00",
-"cfsellavgprc":"0.00",
-"openbuyqty":"0",
-"opensellqty":"23",
-"openbuyamt":"0.00",
-"openbuyavgprc":"0.00",
-"opensellamt":"30015.00",
-"opensellavgprc":"1305.00",
-"netqty":"0",
-"netavgprc":"0.00",
-"lp":"0.00",
-"urmtom":"0.00",
-"rpnl":"0.00",
-"cforgavgprc":"0.00"
-     }
+"actid":"TESTINV1",
+"exch":"EQT",
+"token":"PRAKASH",
+"prd":"I",
+"openbuyqty":"00",
+"opensellqty":"09",
+"openbuyamt":"00",
+"opensellamt":"54000",
+"daybuyqty":"01",
+"daysellqty":"01",
+"daybuyamt":"6000",
+"daysellamt":"6000",
+"cfbuyqty":"00",
+"cfsellqty":"00",
+"cfbuyamt":"00",
+"cfsellamt":"6000",
+"child_orders":[
+                {
+                "exch":"NSE",
+                "token":"2708",
+                "openbuyqty":"00",
+                "opensellqty":"09",
+                "openbuyamt":"00",
+                "opensellamt":"54000",
+                "daybuyqty":"00",
+                "daysellqty":"01",
+                "daybuyamt":"00",
+                "daysellamt":"6000",
+                "cfbuyqty":"00",
+                "cfsellqty":"00",
+                "cfbuyamt":"00",
+                "cfsellamt":"00",
+                "upload_prc":"00"
+                },
+                {
+                "exch":"BSE",
+                "token":"506022",
+                "openbuyqty":"00",
+                "opensellqty":"00",
+                "openbuyamt":"00",
+                "opensellamt":"00",
+                "daybuyqty":"01",
+                "daysellqty":"00",
+                "daybuyamt":"6000",
+                "daysellamt":"00",
+                "cfbuyqty":"00",
+                "cfsellqty":"00",
+                "cfbuyamt":"00",
+                "cfsellamt":"00",
+                "upload_prc":"00"
+                }
+                ]
+}
 ]
-
 Sample Failure Response :
 {
     "stat":"Not_Ok",
